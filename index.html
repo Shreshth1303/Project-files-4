@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ocean Vibes</title>
+    <!-- Preconnect and font link -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        /* Basic reset and global styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-image: url('beach.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            font-family: 'Arial', sans-serif;
+            color: #fff;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        /* Header container styles */
+        .header-container {
+            display: flex;
+            flex-direction: column; /* Stack elements vertically on small screens */
+            padding: 10px 5%;
+            background: rgba(0, 0, 0, 0.7); /* Semi-transparent background for better contrast */
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            z-index: 1001; /* Higher than the navbar */
+            border-bottom: 3px solid #ffadad; /* Highlight with a color that contrasts well */
+        }
+
+        .header-top {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding-bottom: 10px;
+        }
+
+        .header-left {
+            display: flex;
+            align-items: center;
+            gap: 10px; /* Space between Home logo and Title */
+        }
+
+        .home-logo {
+            width: 24px; /* Adjust size for small screens */
+            height: 24px;
+            fill: #fff; /* Color of the SVG */
+            transition: fill 0.3s;
+        }
+
+        .home-logo:hover {
+            fill: #ffadad; /* Change color on hover */
+        }
+
+        .title {
+            font-family: 'Playfair Display', serif; /* Corrected the font */
+            color: #ffadad; /* Matching color with the border */
+            font-size: 1.5em; /* Adjust size for small screens */
+        }
+
+        .header-right a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+            padding: 5px 10px;
+            border-radius: 5px;
+            background-color: rgba(0, 0, 0, 0.3); /* Button background */
+            font-size: 0.9em; /* Adjust size for small screens */
+        }
+
+        .header-right a:hover {
+            background-color: rgba(0, 0, 0, 0.5); /* Darker background on hover */
+        }
+
+        /* Main content area */
+        .content {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 20px;
+            margin-top: 80px; /* Space for the fixed header */
+        }
+
+        h1 {
+            color: #ffffff; /* Matching color with the header title */
+            font-family: 'Playfair Display', serif; /* Corrected the font */
+            font-size: 2em; /* Adjust size for small screens */
+        }
+
+        /* Media Query for Small Screens */
+        @media (max-width: 600px) {
+            .header-container {
+                padding: 10px 2%;
+            }
+
+            .header-left {
+                gap: 5px; /* Reduced gap for smaller screens */
+            }
+
+            .home-logo {
+                width: 20px; /* Smaller logo size for small screens */
+                height: 20px;
+            }
+
+            .title {
+                font-size: 1.2em; /* Smaller title font size for small screens */
+            }
+
+            .header-right a {
+                font-size: 0.8em; /* Smaller button text for small screens */
+                padding: 5px;
+            }
+
+            h1 {
+                font-size: 1.8em; /* Smaller h1 font size for small screens */
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header-container">
+        <div class="header-top">
+            <div class="header-left">
+                <a href="#">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="home-logo" viewBox="0 0 16 16">
+                      <path d="M6.5 14.5v-3.505c0-.245.25-.495.5-.495h2c.25 0 .5.25.5.5v3.5a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5"/>
+                    </svg>
+                </a>
+                <div class="title">Ocean Vibes</div>
+            </div>
+            <div class="header-right">
+                <a href="login page.html">Login</a>
+                <a href="register page.html">Sign Up</a>
+            </div>
+        </div>
+    </header>
+    <main class="content">
+        <h1>Welcome to Ocean Vibes</h1>
+    </main>
+</body>
+</html>

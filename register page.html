@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ocean Vibes</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playwrite+CU:wght@100;400&display=swap" rel="stylesheet">
+    <style>
+        .dropdown-container {
+            max-width: 300px;
+            margin: 0 auto;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+    </style>
+    <script>
+        let allCards = [];
+
+        function loadCards() {
+            fetch('cards.html')
+                .then(response => response.text())
+                .then(data => {
+                    allCards = data;
+                    displayCards(allCards);
+                });
+        }
+
+        function displayCards(cards) {
+            document.getElementById('content').innerHTML = cards;
+        }
+
+        function filterByState(state) {
+            const cards = allCards;
+            if (state === 'all') {
+                displayCards(cards);
+            } else {
+                const filteredCards = cards.match(new RegExp(`<div class="card"[^]*?<p class="card-text">.*?${state}.*?</p>[^]*?</div>`, 'g'));
+                displayCards(filteredCards ? filteredCards.join('') : 'No beaches found in this state.');
+            }
+        }
+
+        window.onload = loadCards;
+    </script>
+</head>
+<body>
+    <header class="header-container">
+        <div class="header-top">
+            <div class="header-left">
+                <a href="#">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="home-logo" viewBox="0 0 16 16">
+                      <path d="M6.5 14.5v-3.505c0-.245.25-.495.5-.495h2c.25 0 .5.25.5.5v3.5a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1 7.5v7a.5.5 0 0 0 .5.5z"/>
+                    </svg>
+                </a>
+                <span class="title">Ocean Vibes</span>
+            </div>
+            <div class="header-right">
+                <a href="#">Home</a>
+                <a href="#">About</a>
+                <a href="#">Contact</a>
+            </div>
+        </div>
+    </header>
+    <div class="container mt-5">
+        <div class="dropdown-container">
+            <label for="stateFilter" class="form-label">Filter by State</label>
+            <select id="stateFilter" class="form-select" onchange="filterByState(this.value)">
+                <option value="all">All States</option>
+                <option value="Tamil Nadu">Tamil Nadu</option>
+                <option value="Kerala">Kerala</option>
+                <option value="Andhra Pradesh">Andhra Pradesh</option>
+                <option value="Goa">Goa</option>
+            </select>
+        </div>
+        <div id="content" class="content">
+            <!-- Cards content will be loaded here -->
+        </div>
+    </div>
+</body>
+</html>

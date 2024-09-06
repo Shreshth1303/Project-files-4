@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ocean Vibes - Goa Beach Cards</title>
+    <style>
+        body {
+            background-color: rgb(12, 95, 114);
+            background-image: url(goa_beach.jpg);
+            background-position: center;
+            background-position: fixed;
+            background-size: cover;
+            background-repeat: no-repeat;
+            min-height: 100vh;
+            color: #fff;
+        }
+
+        .header {
+            padding: 10px 20px;
+            background: rgba(0, 0, 0, 0.7);
+            border-bottom: 2px solid #ffadad;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .header a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .card-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .card {
+            background-color: rgba(255, 255, 255, 0.8);
+            border: none;
+            border-radius: 15px;
+            max-width: 300px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: transform 0.2s ease-in-out;
+            text-align: center;
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+        }
+
+        .card-img-top {
+            border-top-left-radius: 15px;
+            border-top-right-radius: 15px;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .card-title {
+            color: #2a9df4;
+            font-size: 1.25rem;
+            margin: 10px 0;
+        }
+
+        .btn-primary {
+            background-color: #2a9df4;
+            border: none;
+            transition: background-color 0.3s ease;
+            margin-bottom: 10px;
+        }
+
+        .btn-primary:hover {
+            background-color: #1e7bbf;
+        }
+
+        .btn-secondary {
+            background-color: #ffadad;
+            border: none;
+            transition: background-color 0.3s ease;
+            margin-bottom: 10px;
+        }
+
+        .btn-secondary:hover {
+            background-color: #e68a8a;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <a href="home page.html" class="btn btn-secondary">Back to Home</a>
+        <h1>Explore Goa Beaches</h1>
+    </div>
+    <div class="container mt-5">
+        <div class="card-container">
+            <div class="card" data-state="Goa">
+                <img src="baga_beach.jpg" class="card-img-top" alt="Baga Beach">
+                <div class="card-body">
+                    <h5 class="card-title">Baga Beach</h5>
+                    <a href="https://maps.google.com/?q=Baga+Beach" class="btn btn-secondary">Location</a>
+                    <a href="baga beach.html" class="btn btn-primary">Explore</a>
+                </div>
+            </div>
+            <div class="card" data-state="Goa">
+                <img src="anjuna_beach.jpg" class="card-img-top" alt="Anjuna Beach">
+                <div class="card-body">
+                    <h5 class="card-title">Anjuna Beach</h5>
+                    <a href="https://maps.google.com/?q=Anjuna+Beach" class="btn btn-secondary">Location</a>
+                    <a href="anjuna.html" class="btn btn-primary">Explore</a>
+                </div>
+            </div>
+            <div class="card" data-state="Goa">
+                <img src="calangute_beach.webp" class="card-img-top" alt="Calangute Beach">
+                <div class="card-body">
+                    <h5 class="card-title">Calangute Beach</h5>
+                    <a href="https://maps.google.com/?q=Calangute+Beach" class="btn btn-secondary">Location</a>
+                    <a href="calangute.html" class="btn btn-primary">Explore</a>
+                </div>
+            </div>
+            <div class="card" data-state="Goa">
+                <img src="palolem_beach.jpg" class="card-img-top" alt="Palolem Beach">
+                <div class="card-body">
+                    <h5 class="card-title">Palolem Beach</h5>
+                    <a href="https://maps.google.com/?q=Palolem+Beach" class="btn btn-secondary">Location</a>
+                    <a href="palolem.html" class="btn btn-primary">Explore</a>
+                </div>
+            </div>
+            <div class="card" data-state="Goa">
+                <img src="colva_beach.jpg" class="card-img-top" alt="Colva Beach">
+                <div class="card-body">
+                    <h5 class="card-title">Colva Beach</h5>
+                    <a href="https://maps.google.com/?q=Colva+Beach" class="btn btn-secondary">Location</a>
+                    <a href="colva.html" class="btn btn-primary">Explore</a>
+                </div>
+            </div>
+            <div class="card" data-state="Goa">
+                <img src="morjim_beach.jpg" class="card-img-top" alt="Morjim Beach">
+                <div class="card-body">
+                    <h5 class="card-title">Morjim Beach</h5>
+                    <a href="https://maps.google.com/?q=Morjim+Beach" class="btn btn-secondary">Location</a>
+                    <a href="morjim.html" class="btn btn-primary">Explore</a>
+                </div>
+            </div>
+            <div class="card" data-state="Goa">
+                <img src="arambol_beach.webp" class="card-img-top" alt="Arambol Beach">
+                <div class="card-body">
+                    <h5 class="card-title">Arambol Beach</h5>
+                    <a href="https://maps.google.com/?q=Arambol+Beach" class="btn btn-secondary">Location</a>
+                    <a href="arambol.html" class="btn btn-primary">Explore</a>
+                </div>
+            </div>
+            <div class="card" data-state="Goa">
+                <img src="vagator_beach.jpg" class="card-img-top" alt="Vagator Beach">
+                <div class="card-body">
+                    <h5 class="card-title">Vagator Beach</h5>
+                    <a href="https://maps.google.com/?q=Vagator+Beach" class="btn btn-secondary">Location</a>
+                    <a href="vagator.html" class="btn btn-primary">Explore</a>
+                </div>
+            </div>
+            <div class="card" data-state="Goa">
+                <img src="cavelossim_beach.jpg" class="card-img-top" alt="Cavelossim Beach">
+                <div class="card-body">
+                    <h5 class="card-title">Cavelossim Beach</h5>
+                    <a href="https://maps.google.com/?q=Cavelossim+Beach" class="btn btn-secondary">Location</a>
+                    <a href="cavelossim.html" class="btn btn-primary">Explore</a>
+                </div>
+            </div>
+            <div class="card" data-state="Goa">
+                <img src="agonda_beach.jpg" class="card-img-top" alt="Agonda Beach">
+                <div class="card-body">
+                    <h5 class="card-title">Agonda Beach</h5>
+                    <a href="https://maps.google.com/?q=Agonda+Beach" class="btn btn-secondary">Location</a>
+                    <a href="agonda.html" class="btn btn-primary">Explore</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
